@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DFE2D9E6-BEA8-4438-B427-936D5D1BAA9F}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>Benchmark</RootNamespace>
-    <AssemblyName>Benchmark</AssemblyName>
+    <ProjectGuid>{1FD4835E-F5B8-487C-9635-6633737D275A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>solverSMTZ3</RootNamespace>
+    <AssemblyName>solverSMTZ3</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -17,31 +17,21 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <ExternalConsole>true</ExternalConsole>
+    <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <Optimize>true</Optimize>
     <OutputPath>bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <ExternalConsole>true</ExternalConsole>
+    <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Core\Core.csproj">
-      <Project>{08C0B4D2-1944-4F99-B2D6-34DED4D9042A}</Project>
-      <Name>Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\solverSMTZ3\solverSMTZ3.csproj">
-      <Project>{1FD4835E-F5B8-487C-9635-6633737D275A}</Project>
-      <Name>solverSMTZ3</Name>
-    </ProjectReference>
+    <Compile Include="SolverSMT.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
