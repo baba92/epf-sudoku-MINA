@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{4471B15F-C55A-4163-85DC-09B39B842AC2}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="solver-SMT-Z3/Sudoku.cs">
+    <Files>
+      <File FileName="solver-SMT-Z3/Program.cs" Line="1" Column="1" />
+      <File FileName="solver-SMT-Z3/Sudoku.cs" Line="130" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="solver-SMT-Z3" expanded="True">
+            <Node name="solver-SMT-Z3" expanded="True">
+              <Node name="Sudoku.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.solver-SMT-Z3 FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

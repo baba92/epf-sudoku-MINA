@@ -1,0 +1,11 @@
+/Users/timothee/Desktop/5A/Intelligence Artificielle/epf-sudoku-MINA/solver-SMT-Z3/solver-SMT-Z3/bin/Debug/netcoreapp3.0/solver-SMT-Z3
+/Users/timothee/Desktop/5A/Intelligence Artificielle/epf-sudoku-MINA/solver-SMT-Z3/solver-SMT-Z3/bin/Debug/netcoreapp3.0/solver-SMT-Z3.deps.json
+/Users/timothee/Desktop/5A/Intelligence Artificielle/epf-sudoku-MINA/solver-SMT-Z3/solver-SMT-Z3/bin/Debug/netcoreapp3.0/solver-SMT-Z3.runtimeconfig.json
+/Users/timothee/Desktop/5A/Intelligence Artificielle/epf-sudoku-MINA/solver-SMT-Z3/solver-SMT-Z3/bin/Debug/netcoreapp3.0/solver-SMT-Z3.runtimeconfig.dev.json
+/Users/timothee/Desktop/5A/Intelligence Artificielle/epf-sudoku-MINA/solver-SMT-Z3/solver-SMT-Z3/bin/Debug/netcoreapp3.0/solver-SMT-Z3.dll
+/Users/timothee/Desktop/5A/Intelligence Artificielle/epf-sudoku-MINA/solver-SMT-Z3/solver-SMT-Z3/bin/Debug/netcoreapp3.0/solver-SMT-Z3.pdb
+/Users/timothee/Desktop/5A/Intelligence Artificielle/epf-sudoku-MINA/solver-SMT-Z3/solver-SMT-Z3/obj/Debug/netcoreapp3.0/solver-SMT-Z3.csprojAssemblyReference.cache
+/Users/timothee/Desktop/5A/Intelligence Artificielle/epf-sudoku-MINA/solver-SMT-Z3/solver-SMT-Z3/obj/Debug/netcoreapp3.0/solver-SMT-Z3.AssemblyInfoInputs.cache
+/Users/timothee/Desktop/5A/Intelligence Artificielle/epf-sudoku-MINA/solver-SMT-Z3/solver-SMT-Z3/obj/Debug/netcoreapp3.0/solver-SMT-Z3.AssemblyInfo.cs
+/Users/timothee/Desktop/5A/Intelligence Artificielle/epf-sudoku-MINA/solver-SMT-Z3/solver-SMT-Z3/obj/Debug/netcoreapp3.0/solver-SMT-Z3.dll
+/Users/timothee/Desktop/5A/Intelligence Artificielle/epf-sudoku-MINA/solver-SMT-Z3/solver-SMT-Z3/obj/Debug/netcoreapp3.0/solver-SMT-Z3.pdb
