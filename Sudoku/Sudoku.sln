@@ -23,7 +23,5 @@ Global
 		{DFE2D9E6-BEA8-4438-B427-936D5D1BAA9F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1FD4835E-F5B8-487C-9635-6633737D275A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1FD4835E-F5B8-487C-9635-6633737D275A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1FD4835E-F5B8-487C-9635-6633737D275A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1FD4835E-F5B8-487C-9635-6633737D275A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

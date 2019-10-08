@@ -1,18 +1,19 @@
 ﻿<Properties StartupConfiguration="{DFE2D9E6-BEA8-4438-B427-936D5D1BAA9F}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Benchmark/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Core/Sudoku.cs">
     <Files>
-      <File FileName="Benchmark/Program.cs" Line="26" Column="2" />
+      <File FileName="Benchmark/Program.cs" Line="25" Column="6" />
+      <File FileName="Core/Sudoku.cs" Line="80" Column="1" />
+      <File FileName="Core/Sudoku.cs" Line="80" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Sudoku" expanded="True">
-            <Node name="Benchmark" expanded="True">
-              <Node name="References" expanded="True" />
-              <Node name="Properties" expanded="True" />
-              <Node name="Program.cs" selected="True" />
+            <Node name="Benchmark" expanded="True" />
+            <Node name="Core" expanded="True">
+              <Node name="Sudoku.cs" selected="True" />
             </Node>
-            <Node name="Core" expanded="True" />
+            <Node name="solverSMTZ3" expanded="True" />
           </Node>
         </State>
       </Pad>
@@ -22,10 +23,10 @@
   <DisabledProjects>
     <String>Core1/Core.csproj</String>
     <String>Core1/Core1.csproj</String>
-    <String>solverSMTZ3/solverSMTZ3.csproj</String>
     <String>Benchmark1/Benchmark.csproj</String>
   </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <Debugger.DebugSourceFolders />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
