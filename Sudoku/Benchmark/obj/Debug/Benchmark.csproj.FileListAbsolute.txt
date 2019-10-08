@@ -1,0 +1,10 @@
+/Users/timothee/Desktop/5A/Intelligence Artificielle/epf-sudoku-MINA/Sudoku/Benchmark/obj/Debug/Benchmark.csprojAssemblyReference.cache
+/Users/timothee/Desktop/5A/Intelligence Artificielle/epf-sudoku-MINA/Sudoku/Benchmark/bin/Debug/Benchmark.exe
+/Users/timothee/Desktop/5A/Intelligence Artificielle/epf-sudoku-MINA/Sudoku/Benchmark/bin/Debug/Benchmark.pdb
+/Users/timothee/Desktop/5A/Intelligence Artificielle/epf-sudoku-MINA/Sudoku/Benchmark/bin/Debug/Core.dll
+/Users/timothee/Desktop/5A/Intelligence Artificielle/epf-sudoku-MINA/Sudoku/Benchmark/bin/Debug/solverSMTZ3.dll
+/Users/timothee/Desktop/5A/Intelligence Artificielle/epf-sudoku-MINA/Sudoku/Benchmark/bin/Debug/Core.pdb
+/Users/timothee/Desktop/5A/Intelligence Artificielle/epf-sudoku-MINA/Sudoku/Benchmark/bin/Debug/solverSMTZ3.pdb
+/Users/timothee/Desktop/5A/Intelligence Artificielle/epf-sudoku-MINA/Sudoku/Benchmark/obj/Debug/Benchmark.csproj.CopyComplete
+/Users/timothee/Desktop/5A/Intelligence Artificielle/epf-sudoku-MINA/Sudoku/Benchmark/obj/Debug/Benchmark.exe
+/Users/timothee/Desktop/5A/Intelligence Artificielle/epf-sudoku-MINA/Sudoku/Benchmark/obj/Debug/Benchmark.pdb

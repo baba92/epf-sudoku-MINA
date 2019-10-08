@@ -1,0 +1,5 @@
+/Users/timothee/Desktop/5A/Intelligence Artificielle/epf-sudoku-MINA/Sudoku/Core/bin/Debug/Core.dll
+/Users/timothee/Desktop/5A/Intelligence Artificielle/epf-sudoku-MINA/Sudoku/Core/bin/Debug/Core.pdb
+/Users/timothee/Desktop/5A/Intelligence Artificielle/epf-sudoku-MINA/Sudoku/Core/obj/Debug/Core.dll
+/Users/timothee/Desktop/5A/Intelligence Artificielle/epf-sudoku-MINA/Sudoku/Core/obj/Debug/Core.pdb
+/Users/timothee/Desktop/5A/Intelligence Artificielle/epf-sudoku-MINA/Sudoku/Core/obj/Debug/Core.csprojAssemblyReference.cache
