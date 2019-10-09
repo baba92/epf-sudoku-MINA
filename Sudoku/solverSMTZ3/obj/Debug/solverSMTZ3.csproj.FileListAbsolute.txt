@@ -3,3 +3,8 @@
 /Users/timothee/Desktop/5A/Intelligence Artificielle/epf-sudoku-MINA/Sudoku/solverSMTZ3/obj/Debug/solverSMTZ3.csprojAssemblyReference.cache
 /Users/timothee/Desktop/5A/Intelligence Artificielle/epf-sudoku-MINA/Sudoku/solverSMTZ3/obj/Debug/solverSMTZ3.dll
 /Users/timothee/Desktop/5A/Intelligence Artificielle/epf-sudoku-MINA/Sudoku/solverSMTZ3/obj/Debug/solverSMTZ3.pdb
+C:\Users\Gerard\source\repos\epf-sudoku-MINA\Sudoku\solverSMTZ3\bin\Debug\solverSMTZ3.dll
+C:\Users\Gerard\source\repos\epf-sudoku-MINA\Sudoku\solverSMTZ3\bin\Debug\solverSMTZ3.pdb
+C:\Users\Gerard\source\repos\epf-sudoku-MINA\Sudoku\solverSMTZ3\obj\Debug\solverSMTZ3.csprojAssemblyReference.cache
+C:\Users\Gerard\source\repos\epf-sudoku-MINA\Sudoku\solverSMTZ3\obj\Debug\solverSMTZ3.dll
+C:\Users\Gerard\source\repos\epf-sudoku-MINA\Sudoku\solverSMTZ3\obj\Debug\solverSMTZ3.pdb

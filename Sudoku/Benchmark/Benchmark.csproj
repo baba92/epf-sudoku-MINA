@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -27,6 +27,9 @@
     <ExternalConsole>true</ExternalConsole>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Z3, Version=4.8.6.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\Microsoft.Z3.x64.4.8.6\lib\netstandard1.4\Microsoft.Z3.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
@@ -34,6 +37,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Z3.LinqBinding\src\Z3.LinqBinding\Z3.LinqBinding.csproj">
+      <Project>{5e7dd7ed-9ac0-4095-ab6b-a6bf21fe5b7f}</Project>
+      <Name>Z3.LinqBinding</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Core\Core.csproj">
       <Project>{08C0B4D2-1944-4F99-B2D6-34DED4D9042A}</Project>
       <Name>Core</Name>
@@ -42,6 +49,9 @@
       <Project>{1FD4835E-F5B8-487C-9635-6633737D275A}</Project>
       <Name>solverSMTZ3</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

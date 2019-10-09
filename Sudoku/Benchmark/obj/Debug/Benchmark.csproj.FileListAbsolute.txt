@@ -1,1 +1,11 @@
 /Users/timothee/Desktop/5A/Intelligence Artificielle/epf-sudoku-MINA/Sudoku/Benchmark/obj/Debug/Benchmark.csprojAssemblyReference.cache
+C:\Users\Gerard\source\repos\epf-sudoku-MINA\Sudoku\Benchmark\bin\Debug\Benchmark.exe
+C:\Users\Gerard\source\repos\epf-sudoku-MINA\Sudoku\Benchmark\bin\Debug\Benchmark.pdb
+C:\Users\Gerard\source\repos\epf-sudoku-MINA\Sudoku\Benchmark\bin\Debug\Core.dll
+C:\Users\Gerard\source\repos\epf-sudoku-MINA\Sudoku\Benchmark\bin\Debug\solverSMTZ3.dll
+C:\Users\Gerard\source\repos\epf-sudoku-MINA\Sudoku\Benchmark\bin\Debug\Core.pdb
+C:\Users\Gerard\source\repos\epf-sudoku-MINA\Sudoku\Benchmark\bin\Debug\solverSMTZ3.pdb
+C:\Users\Gerard\source\repos\epf-sudoku-MINA\Sudoku\Benchmark\obj\Debug\Benchmark.csprojAssemblyReference.cache
+C:\Users\Gerard\source\repos\epf-sudoku-MINA\Sudoku\Benchmark\obj\Debug\Benchmark.csproj.CopyComplete
+C:\Users\Gerard\source\repos\epf-sudoku-MINA\Sudoku\Benchmark\obj\Debug\Benchmark.exe
+C:\Users\Gerard\source\repos\epf-sudoku-MINA\Sudoku\Benchmark\obj\Debug\Benchmark.pdb
