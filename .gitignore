@@ -3,3 +3,9 @@
 ################################################################################
 
 /Sudoku/.vs/Sudoku/v15
+/Sudoku/Benchmark/obj
+/Sudoku/Benchmark/bin/Debug/netcoreapp2.2
+/Sudoku/Core/bin/Debug/netstandard2.0
+/Sudoku/Core/obj
+/Sudoku/Core.old
+/Sudoku/SolverSMT/obj
