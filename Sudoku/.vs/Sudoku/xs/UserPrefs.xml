@@ -1,21 +1,18 @@
 ﻿<Properties StartupConfiguration="{DFE2D9E6-BEA8-4438-B427-936D5D1BAA9F}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Core/Sudoku.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Benchmark/Program.cs">
     <Files>
-      <File FileName="Benchmark/Program.cs" Line="25" Column="6" />
-      <File FileName="Core/Sudoku.cs" Line="80" Column="1" />
-      <File FileName="Core/Sudoku.cs" Line="80" Column="1" />
+      <File FileName="Benchmark/Program.cs" Line="11" Column="38" />
+      <File FileName="Core/Sudoku.cs" />
+      <File FileName="Core/ISudokuSolver.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Sudoku" expanded="True">
-            <Node name="Benchmark" expanded="True" />
-            <Node name="Core" expanded="True">
-              <Node name="Sudoku.cs" selected="True" />
-            </Node>
-            <Node name="solverSMTZ3" expanded="True" />
-          </Node>
+          <Node name="Sudoku" expanded="True" selected="True" />
         </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

@@ -8,7 +8,7 @@ namespace Benchmark
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello_World!");
 
             string directory = Directory.GetParent(Directory.GetParent(Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).ToString()).ToString()).ToString()).ToString();
             var sudokupath = Path.Combine(directory + "/data/Sudoku_Easy50.txt");
