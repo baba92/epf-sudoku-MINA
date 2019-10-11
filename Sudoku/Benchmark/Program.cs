@@ -30,7 +30,7 @@ namespace Benchmark
 
 			foreach (var file in Directory.GetFiles(AppDomain.CurrentDomain.BaseDirectory))
 			{
-				if (file.EndsWith("dll"))
+				if (file.EndsWith("dll") && !( Path.GetFileName(file).StartsWith("libz3")))
 				{
 					var assembly = AssemblyLoadContext.Default.LoadFromAssemblyPath(file);
 					foreach (var type in assembly.GetTypes())
@@ -55,10 +55,10 @@ namespace Benchmark
 			{
 				var aResoudre = new Sudoku.Core.Sudoku() {Cells = new List<int>(premierSudoku.Cells)};
 				chrono.Restart();
-				sudokuSolver.Solve(aResoudre);
+				var resolu = sudokuSolver.Solve(aResoudre);
 				var tempsPasse = chrono.Elapsed;
 				Console.WriteLine(sudokuSolver.GetType().Name);
-				Console.WriteLine(aResoudre.ToString());
+				Console.WriteLine(resolu.ToString());
 				Console.WriteLine(tempsPasse.ToString());
 			}
 

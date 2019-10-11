@@ -9,7 +9,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Z3.x64" Version="4.8.6" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Core\Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ExpressionUtils">
+      <HintPath>external\ExpressionUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="Z3.LinqBinding">
+      <HintPath>external\Z3.LinqBinding.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
