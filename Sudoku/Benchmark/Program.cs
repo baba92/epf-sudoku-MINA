@@ -27,17 +27,17 @@ namespace Benchmark
 			var solvers = new List<ISudokuSolver>();
 
 
-
-			foreach (var file in Directory.GetFiles(AppDomain.CurrentDomain.BaseDirectory))
+           
+            foreach (var file in Directory.GetFiles(AppDomain.CurrentDomain.BaseDirectory))
 			{
-				if (file.EndsWith("dll") && !( Path.GetFileName(file).StartsWith("libz3")))
+                if (file.EndsWith("dll") && !( Path.GetFileName(file).StartsWith("libz3")))
 				{
 					var assembly = AssemblyLoadContext.Default.LoadFromAssemblyPath(file);
 					foreach (var type in assembly.GetTypes())
 					{
 						if (typeof(ISudokuSolver).IsAssignableFrom(type) && !(typeof(ISudokuSolver) == type))
 						{
-							var solver = (ISudokuSolver)Activator.CreateInstance(type);
+                            var solver = (ISudokuSolver)Activator.CreateInstance(type);
 							solvers.Add(solver);
 						}
 					}
@@ -81,10 +81,11 @@ namespace Benchmark
 
 		static List<Sudoku.Core.Sudoku> LoadEasy()
         {
-			string dataDirectory = @"..\..\..\..\..\data";
-			var sudokupath = Path.Combine(dataDirectory + @"\Sudoku_Easy50.txt");
+            string dataDirectory = @"../../../../../data";
+            var sudokupath = Path.Combine(dataDirectory + @"/Sudoku_Easy50.txt");
 
-	        List<Sudoku.Core.Sudoku> allSudokus = Sudoku.Core.Sudoku.ParseFile(sudokupath);
+
+            List<Sudoku.Core.Sudoku> allSudokus = Sudoku.Core.Sudoku.ParseFile(sudokupath);
 	        return allSudokus;
         }
 
