@@ -49,6 +49,7 @@ namespace Benchmark
 	        var premierSudoku = allSudokus[0];
 
 			Console.WriteLine(premierSudoku.ToString());
+            TimeSpan tempsTotal = new TimeSpan();
 
 	        var chrono = new Stopwatch();
 
@@ -60,11 +61,13 @@ namespace Benchmark
                     chrono.Restart();
                     var resolu = sudokuSolver.Solve(aResoudre);
                     var tempsPasse = chrono.Elapsed;
+                    tempsTotal += tempsPasse;
                     Console.WriteLine(sudokuSolver.GetType().Name);
                     Console.WriteLine(resolu.ToString());
                     Console.WriteLine(tempsPasse.ToString());
                 }
-			}
+                Console.WriteLine(String.Concat("temps total de résolution pour ", sudokuSolver.GetType().Name, " :", tempsTotal.ToString()));
+			}      
         }
 
 
@@ -84,7 +87,7 @@ namespace Benchmark
 		static List<Sudoku.Core.Sudoku> LoadEasy()
         {
             string dataDirectory = @"../../../../../data";
-            var sudokupath = Path.Combine(dataDirectory + @"/Sudoku_Easy50.txt");
+            var sudokupath = Path.Combine(dataDirectory + @"/Sudoku_top95.txt");
 
 
             List<Sudoku.Core.Sudoku> allSudokus = Sudoku.Core.Sudoku.ParseFile(sudokupath);
