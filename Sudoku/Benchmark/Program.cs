@@ -51,18 +51,20 @@ namespace Benchmark
 			Console.WriteLine(premierSudoku.ToString());
 
 	        var chrono = new Stopwatch();
-			foreach (var sudokuSolver in solvers)
+
+            foreach (var sudokuSolver in solvers)
 			{
-				var aResoudre = new Sudoku.Core.Sudoku() {Cells = new List<int>(premierSudoku.Cells)};
-				chrono.Restart();
-				var resolu = sudokuSolver.Solve(aResoudre);
-				var tempsPasse = chrono.Elapsed;
-				Console.WriteLine(sudokuSolver.GetType().Name);
-				Console.WriteLine(resolu.ToString());
-				Console.WriteLine(tempsPasse.ToString());
+                foreach (var unsudoku in allSudokus)
+                {
+                    var aResoudre = new Sudoku.Core.Sudoku() { Cells = new List<int>(unsudoku.Cells) };
+                    chrono.Restart();
+                    var resolu = sudokuSolver.Solve(aResoudre);
+                    var tempsPasse = chrono.Elapsed;
+                    Console.WriteLine(sudokuSolver.GetType().Name);
+                    Console.WriteLine(resolu.ToString());
+                    Console.WriteLine(tempsPasse.ToString());
+                }
 			}
-
-
         }
 
 

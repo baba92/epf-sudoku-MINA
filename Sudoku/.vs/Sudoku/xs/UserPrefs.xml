@@ -3,7 +3,7 @@
     <Files>
       <File FileName="Core/Sudoku.cs" Line="1" Column="1" />
       <File FileName="Core/ISudokuSolver.cs" />
-      <File FileName="Benchmark/Program.cs" Line="85" Column="82" />
+      <File FileName="Benchmark/Program.cs" Line="66" Column="10" />
       <File FileName="SolverSMT/SolverSMT.cs" Line="1" Column="1" />
     </Files>
     <Pads>
