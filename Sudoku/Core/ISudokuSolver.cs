@@ -1,8 +1,11 @@
 ﻿using System;
-namespace solver_SMT_Z3
+namespace Sudoku.Core
 {
     public interface ISudokuSolver
     {
-        //A implementer pour chaque solver
+		//A implementer pour chaque solver
+
+		Sudoku Solve(Sudoku s);
+
     }
 }
