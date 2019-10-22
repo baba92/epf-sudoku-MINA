@@ -6,6 +6,8 @@ using System.Linq;
 using System.Runtime.Loader;
 using Sudoku.Core;
 
+using IronPython.Hosting;
+
 namespace Benchmark
 {
     class Program
@@ -14,7 +16,11 @@ namespace Benchmark
         {
             Console.WriteLine("Hello World!");
 
-            Benchmark1();
+           // Benchmark1();
+            CSP();
+            
+
+           
 
             Console.ReadLine();
         }
@@ -93,6 +99,26 @@ namespace Benchmark
             List<Sudoku.Core.Sudoku> allSudokus = Sudoku.Core.Sudoku.ParseFile(sudokupath);
 	        return allSudokus;
         }
+        static void CSP()
+        {
+            string dataDirectory = @"../../../../../data";
+        var sudokupath = Path.Combine(dataDirectory + @"/Sudoku_top95.txt");
+
+        var engine = Python.CreateEngine();
+        var searchPaths = engine.GetSearchPaths();
+
+        searchPaths.Add(@"C:/Python27/Lib");
+        searchPaths.Add(@"C:/Users/lolos/source/repos/epf-sudoku-MINA-laurie/Sudoku/CSP_IronPyton");
+    
+         engine.SetSearchPaths(searchPaths);
+         var mainfile = @"C:/Users/lolos/source/repos/epf-sudoku-MINA-laurie/Sudoku/CSP_IronPyton/Test.py";
+        var scope = engine.CreateScope();
+        scope.ImportModule("timeit");
+            engine.CreateScriptSourceFromFile(mainfile).Execute(scope);
+
+        dynamic testFunction = scope.GetVariable("main");
+        var result = testFunction(sudokupath);
+    } 
 
 	}
 }
