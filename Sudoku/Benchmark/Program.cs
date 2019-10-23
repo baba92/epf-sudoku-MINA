@@ -16,8 +16,8 @@ namespace Benchmark
         {
             Console.WriteLine("Hello World!");
 
-           // Benchmark1();
-            CSP();
+            Benchmark1();
+           // CSP();
          
 
             Console.ReadLine();
@@ -29,8 +29,6 @@ namespace Benchmark
 	        
 
 			var solvers = new List<ISudokuSolver>();
-
-
            
             foreach (var file in Directory.GetFiles(AppDomain.CurrentDomain.BaseDirectory))
 			{
@@ -53,25 +51,45 @@ namespace Benchmark
 	        var premierSudoku = allSudokus[0];
 
 			Console.WriteLine(premierSudoku.ToString());
-            TimeSpan tempsTotal = new TimeSpan();
+            
 
 	        var chrono = new Stopwatch();
+          //  List<List<TimeSpan>> tempsTotalParSolver = new List<List<TimeSpan>>();
+            List<TempsParSudoku> listParSolver = new List<TempsParSudoku>();
 
-            foreach (var sudokuSolver in solvers)
-			{
-                foreach (var unsudoku in allSudokus)
+            Int32 i = 0;
+
+            foreach (var unsudoku in allSudokus)
+            {
+                foreach (var sudokuSolver in solvers)
                 {
                     var aResoudre = new Sudoku.Core.Sudoku() { Cells = new List<int>(unsudoku.Cells) };
                     chrono.Restart();
                     var resolu = sudokuSolver.Solve(aResoudre);
                     var tempsPasse = chrono.Elapsed;
-                    tempsTotal += tempsPasse;
+                   
                     Console.WriteLine(sudokuSolver.GetType().Name);
                     Console.WriteLine(resolu.ToString());
-                    Console.WriteLine(tempsPasse.ToString());
+                    Console.WriteLine(String.Concat("Temps résolu par ", sudokuSolver.GetType().Name, " : " ,tempsPasse.ToString()));
+                   
+
+                    listParSolver.Add(new TempsParSudoku(sudokuSolver.GetType().Name,tempsPasse));
+
                 }
-                Console.WriteLine(String.Concat("temps total de résolution pour ", sudokuSolver.GetType().Name, " :", tempsTotal.ToString()));
-			}      
+                CSP(i);
+                i++;
+
+            }
+            ILookup<String, TempsParSudoku> tempsPasseSurUnSudokuBySolver = listParSolver.ToLookup(o => o.NomSolver);
+            foreach (var solver in tempsPasseSurUnSudokuBySolver)
+            {
+                TimeSpan tempsTotal = new TimeSpan();
+                foreach (var time in solver)
+                {                  
+                    tempsTotal += time.TempsPasse;
+                }
+                Console.WriteLine("Solver {0} a résolu en {1}", solver.Key,tempsTotal);
+            }
         }
 
 
@@ -87,7 +105,15 @@ namespace Benchmark
 
 		}
 
-
+        static TimeSpan calculTempsTotal(List<TimeSpan> tempsPasses)
+        {
+            TimeSpan tempsTotal = new TimeSpan();
+            foreach(var unTemps in tempsPasses)
+            {
+                tempsTotal += unTemps;
+            }
+            return tempsTotal;
+        }
 		static List<Sudoku.Core.Sudoku> LoadEasy()
         {
             string dataDirectory = @"../../../../../data";
@@ -101,7 +127,7 @@ namespace Benchmark
 
 
 
-        static void CSP()
+        static void CSP(Int32 i)
         {
          string dataDirectory = @"../../../../../data";
         var sudokupath = Path.Combine(dataDirectory + @"/Sudoku_top95.txt");
@@ -120,7 +146,7 @@ namespace Benchmark
             engine.CreateScriptSourceFromFile(mainfile).Execute(scope);
 
         dynamic testFunction = scope.GetVariable("main");
-        var result = testFunction(sudokupath);
+        var result = testFunction(sudokupath,i);
     } 
 
 	}

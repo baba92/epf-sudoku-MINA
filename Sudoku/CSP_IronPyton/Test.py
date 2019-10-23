@@ -125,7 +125,7 @@ def displaySudokuNoResolved(a):
                 row=row-1
 
 
-def main(file):
+def main(file,i):
     time = []
     back_track = []
 
@@ -145,7 +145,7 @@ def main(file):
     #                                                             ...
     # 
     #                                                             self.original_board[8] = last row
-    table=fill_grid(grids[1])
+    table=fill_grid(grids[i])
     for i in range(n_test):
         if(i==0):
              inf = mac    
@@ -159,9 +159,9 @@ def main(file):
         t1.start(inf)
         back_track.append(t1.bt)
         time.append(round(t1.end - t1.start, 5))
-
+        
     print("\naverage time:" + str(sum(time) / len(time)))
-    print("average bt:" + str(sum(back_track) / len(back_track)))
+    
     
 
 

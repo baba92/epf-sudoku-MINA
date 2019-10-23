@@ -2,12 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\Sudoku",
-    "\\Sudoku\\Benchmark",
     "\\Sudoku\\Benchmark\\bin",
     "\\Sudoku\\Benchmark\\Properties",
     "\\Sudoku\\Benchmark\\Properties\\PublishProfiles",
-    "\\Sudoku\\Core",
-    "\\Sudoku\\CSP_IronPyton"
+    "\\Sudoku\\CSP_IronPyton",
+    "\\Sudoku\\CSP_IronPyton\\external"
   ],
   "SelectedNode": "\\Sudoku\\Sudoku.sln",
   "PreviewInSolutionExplorer": false
