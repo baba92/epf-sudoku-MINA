@@ -35,9 +35,9 @@ class Test:
                 solution="forward_checking"
             if(inf==no_inference):
                 solution="no_inference"
-            print("\nSolution found by "+solution)
+            #print("\nSolution found by "+solution)
             
-            displaySudoku(a)
+           # displaySudoku(a)
         else:
             
             print("\n Please check the sudoku initial board, solution not found!")
@@ -69,7 +69,7 @@ def fill_grid(grid):
      table=[[verify(iterator.next()) for y in range(9)] for x in range(9)]
 
 
-     displaySudokuNoResolved(table)
+     #displaySudokuNoResolved(table)
 
      return table
 
@@ -131,12 +131,11 @@ def main(file,i):
 
     grids=parse_file(file)
    
-    n_test = 2
     # modify inf to the type of inference that you want to do after assign a value
     # options are no_inference, forward_checking and mac
     #inf = mac
     # level 1 means level Easy and level 2 means level hard
-    level = 2
+    level = 1
     # which can assume 3 values: 0, 1 and 2 so we can use 3 boards for each level
     which = 0
     # if needed just modify self.which = self.which%3 to %4 in method set_board of Test Class
@@ -146,21 +145,15 @@ def main(file,i):
     # 
     #                                                             self.original_board[8] = last row
     table=fill_grid(grids[i])
-    for i in range(n_test):
-        if(i==0):
-             inf = mac    
-        if(i==1):
-            inf = forward_checking
-        if(i==2):
-            inf = no_inference
-
-        t1 = Test()
-        t1.set_board(level, which,table)
-        t1.start(inf)
-        back_track.append(t1.bt)
-        time.append(round(t1.end - t1.start, 5))
+    
+    inf = forward_checking    
+    t1 = Test()
+    t1.set_board(level, which,table)
+    t1.start(inf)
+    back_track.append(t1.bt)
+    time.append(round(t1.end - t1.start, 5))
         
-    print("\naverage time:" + str(sum(time) / len(time)))
+   
     
     
 

@@ -17,7 +17,7 @@ namespace Benchmark
             Console.WriteLine("Hello World!");
 
             Benchmark1();
-           // CSP();
+            //CSP(1);
          
 
             Console.ReadLine();
@@ -50,7 +50,7 @@ namespace Benchmark
 			var allSudokus = LoadEasy();
 	        var premierSudoku = allSudokus[0];
 
-			Console.WriteLine(premierSudoku.ToString());
+			//Console.WriteLine(premierSudoku.ToString());
             
 
 	        var chrono = new Stopwatch();
@@ -68,7 +68,6 @@ namespace Benchmark
                     var resolu = sudokuSolver.Solve(aResoudre);
                     var tempsPasse = chrono.Elapsed;
                    
-                    Console.WriteLine(sudokuSolver.GetType().Name);
                     Console.WriteLine(resolu.ToString());
                     Console.WriteLine(String.Concat("Temps résolu par ", sudokuSolver.GetType().Name, " : " ,tempsPasse.ToString()));
                    
@@ -76,7 +75,13 @@ namespace Benchmark
                     listParSolver.Add(new TempsParSudoku(sudokuSolver.GetType().Name,tempsPasse));
 
                 }
+
+                //Pour le solver CSP en IronPython
+                chrono.Restart();
                 CSP(i);
+                var tempsPasseCSP = chrono.Elapsed;
+                listParSolver.Add(new TempsParSudoku("CSP", tempsPasseCSP));
+                Console.WriteLine(String.Concat("Temps résolu par CSP : ", tempsPasseCSP.ToString()));
                 i++;
 
             }
@@ -88,7 +93,7 @@ namespace Benchmark
                 {                  
                     tempsTotal += time.TempsPasse;
                 }
-                Console.WriteLine("Solver {0} a résolu en {1}", solver.Key,tempsTotal);
+                Console.WriteLine("Solver {0} a tout résolu en {1}", solver.Key,tempsTotal);
             }
         }
 
@@ -135,15 +140,15 @@ namespace Benchmark
 
         var engine = Python.CreateEngine();
         var searchPaths = engine.GetSearchPaths();
-            dataDirectory = @"../../../../../Sudoku/CSP_IronPyton";
+        dataDirectory = @"../../../../../Sudoku/CSP_IronPyton";
         searchPaths.Add(Path.Combine(dataDirectory + @"/external/Python27/Lib"));
         searchPaths.Add(Path.Combine(dataDirectory));
     
-         engine.SetSearchPaths(searchPaths);
-         var mainfile = Path.Combine(dataDirectory + @"/Test.py");
+        engine.SetSearchPaths(searchPaths);
+        var mainfile = Path.Combine(dataDirectory + @"/Test.py");
         var scope = engine.CreateScope();
         scope.ImportModule("timeit");
-            engine.CreateScriptSourceFromFile(mainfile).Execute(scope);
+        engine.CreateScriptSourceFromFile(mainfile).Execute(scope);
 
         dynamic testFunction = scope.GetVariable("main");
         var result = testFunction(sudokupath,i);
