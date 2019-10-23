@@ -12,6 +12,7 @@ namespace Benchmark
 {
     class Program
     {
+        private static String fichierChoisi;
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
@@ -47,7 +48,7 @@ namespace Benchmark
 
 			}
 
-			var allSudokus = LoadEasy();
+            var allSudokus = Menu();
 	        var premierSudoku = allSudokus[0];
 
 			//Console.WriteLine(premierSudoku.ToString());
@@ -119,7 +120,7 @@ namespace Benchmark
             }
             return tempsTotal;
         }
-		static List<Sudoku.Core.Sudoku> LoadEasy()
+		static List<Sudoku.Core.Sudoku> LoadTop95()
         {
             string dataDirectory = @"../../../../../data";
             var sudokupath = Path.Combine(dataDirectory + @"/Sudoku_top95.txt");
@@ -128,6 +129,24 @@ namespace Benchmark
             List<Sudoku.Core.Sudoku> allSudokus = Sudoku.Core.Sudoku.ParseFile(sudokupath);
 	        return allSudokus;
         }
+        static List<Sudoku.Core.Sudoku> LoadEasy()
+        {
+            string dataDirectory = @"../../../../../data";
+            var sudokupath = Path.Combine(dataDirectory + @"/Sudoku_Easy50.txt");
+
+
+            List<Sudoku.Core.Sudoku> allSudokus = Sudoku.Core.Sudoku.ParseFile(sudokupath);
+            return allSudokus;
+        }
+        static List<Sudoku.Core.Sudoku> LoadHardest()
+        {
+            string dataDirectory = @"../../../../../data";
+            var sudokupath = Path.Combine(dataDirectory + @"/Sudoku_hardest.txt");
+
+
+            List<Sudoku.Core.Sudoku> allSudokus = Sudoku.Core.Sudoku.ParseFile(sudokupath);
+            return allSudokus;
+        }
 
 
 
@@ -135,7 +154,7 @@ namespace Benchmark
         static void CSP(Int32 i)
         {
          string dataDirectory = @"../../../../../data";
-        var sudokupath = Path.Combine(dataDirectory + @"/Sudoku_top95.txt");
+        var sudokupath = Path.Combine(dataDirectory + fichierChoisi);
             
 
         var engine = Python.CreateEngine();
@@ -152,7 +171,49 @@ namespace Benchmark
 
         dynamic testFunction = scope.GetVariable("main");
         var result = testFunction(sudokupath,i);
-    } 
+        } 
+         
+        static List<Sudoku.Core.Sudoku> Menu()
+        {
+            List<Sudoku.Core.Sudoku> sudokus = new List<Sudoku.Core.Sudoku>();
+            bool bonChoix = false;
+            int x = 0;
+            Console.WriteLine("Bienvenue dans le Benchmark du groupe 1 ! \n Sélectionnez votre niveau de difficulté de sudoku ? 1 (Easy) | 2 (top95) | 3 (hardest)");
+            while (bonChoix==false)
+            {
+                var choix = Console.ReadLine();
+                if (Int32.TryParse(choix, out x))
+                {
+                    switch (x)
+                    {
+                        case 1:
+                            sudokus = LoadEasy();
+                            bonChoix = true;
+                            fichierChoisi = @"/Sudoku_Easy50.txt";
+                            break;
+                        case 2:
+                            sudokus = LoadTop95();
+                            bonChoix = true;
+                            fichierChoisi = @"/Sudoku_top95.txt";
+                            break;
+                        case 3:
+                            sudokus = LoadHardest();
+                            bonChoix = true;
+                            fichierChoisi = @"/Sudoku_hardest.txt";
+                            break;
 
-	}
+
+                            
+
+                    }
+                }
+                
+            }
+
+            return sudokus;
+        }
+
+
+
+    }
 }
